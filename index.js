@@ -40,6 +40,8 @@ app.use(function(req, res, next) {
 
 app.get('/api/session/set/:name/:value', setSession);
 app.get('/api/session/get/:name', getSession);
+
+var userService = require('./service/user.service.server');
 var sectionService = require('./service/section.service.server');
 var enrollService = require('./service/enroll.service.server');
 

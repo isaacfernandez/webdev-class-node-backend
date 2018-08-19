@@ -42,7 +42,7 @@ module.exports = function (app) {
             })
             .then(function () {
                 if (section.seats <= 0) {
-                    res.sendStatus(403);
+                    res.send("unavailable");
                 } else if (success) {
                     sectionModel
                         .decrementSectionSeats(sectionId)
@@ -54,7 +54,7 @@ module.exports = function (app) {
                             res.json(enrollment);
                         })
                 } else {
-                    res.sendStatus(404)
+                    res.send(false);
                 }
             })
     }
