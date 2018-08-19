@@ -43,8 +43,6 @@ module.exports = function (app) {
     }
 
     function createSection(req, res) {
-        var isAdmin = req.session['currentUser'].admin;
-        if (isAdmin) {
             var section = req.body;
             var courseId = req.params['courseId'];
             //section.courseId = courseId;
@@ -53,9 +51,6 @@ module.exports = function (app) {
                 .then(function (section) {
                     res.json(section);
                 })
-        }
-        else {
-            res.send(false);
         }
     }
 };
