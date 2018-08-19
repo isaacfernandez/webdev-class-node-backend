@@ -13,7 +13,6 @@ db.once('open', function() {
     admin.save();
 });
 
-
 function findUserByCredentials(credentials) {
     var response = userModel.findOne(credentials);
     return response;
