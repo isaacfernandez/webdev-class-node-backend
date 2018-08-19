@@ -9,6 +9,7 @@ module.exports = function (app) {
 
 
     function findSectionsForStudent(req, res) {
+        console.log(req.session);
         var currentUser = req.session.currentUser;
         var studentId = currentUser._id;
         enrollmentModel
