@@ -5,7 +5,7 @@ var userModel = mongoose.model('UserModel', userSchema);
 mongoose.connect('mongodb://heroku_kpt5ftnp:n3r886vrrbi4jlpb1089gqojuu@ds263500.mlab.com:63500/heroku_kpt5ftnp');
 var db = mongoose.connection;
 db.once('open', function() {
-    var admin = new UserModel({
+    var admin = new userModel({
         username: 'admin',
         password: 'admin',
         admin: true
