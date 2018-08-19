@@ -45,6 +45,7 @@ var userService = require('./service/user.service.server');
 var sectionService = require('./service/section.service.server');
 var enrollService = require('./service/enroll.service.server');
 
+userService(app);
 sectionService(app);
 enrollService(app);
 app.listen(process.env.PORT || 6000);
