@@ -2,6 +2,18 @@ var mongoose = require('mongoose');
 var userSchema = require('./user.schema.server');
 var userModel = mongoose.model('UserModel', userSchema);
 
+mongoose.connect('mongodb://heroku_kpt5ftnp:n3r886vrrbi4jlpb1089gqojuu@ds263500.mlab.com:63500/heroku_kpt5ftnp');
+var db = mongoose.connection;
+db.once('open', function() {
+    var admin = new UserModel({
+        username: 'admin',
+        password: 'admin',
+        admin: true
+    });
+    admin.save();
+});
+
+
 function findUserByCredentials(credentials) {
     var response = userModel.findOne(credentials);
     return response;
@@ -26,6 +38,7 @@ function findAllUsers() {
 }
 
 function deleteUser(userId) {
+    //this should check session / if admin
     return userModel.remove({_id: userId});
 }
 
