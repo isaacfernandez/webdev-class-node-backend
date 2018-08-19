@@ -43,14 +43,13 @@ module.exports = function (app) {
     }
 
     function createSection(req, res) {
-            var section = req.body;
-            var courseId = req.params['courseId'];
-            //section.courseId = courseId;
-            sectionModel
-                .createSection(section)
-                .then(function (section) {
-                    res.json(section);
-                })
-        }
+        var section = req.body;
+        var courseId = req.params['courseId'];
+        //section.courseId = courseId;
+        sectionModel
+            .createSection(section)
+            .then(function (section) {
+                res.json(section);
+            })
     }
-};
+}
