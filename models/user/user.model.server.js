@@ -17,6 +17,7 @@ function findUserById(userId) {
 }
 
 function createUser(user) {
+    user.admin = false; //Set it in the db
     return userModel.create(user);
 }
 
