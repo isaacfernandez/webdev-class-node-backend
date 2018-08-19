@@ -1,0 +1,27 @@
+{
+  "name": "wbdv-s2-4-nodejs",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "mongoose": "^5.1.4"
+  },
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isaacfernandez/webdev-class-node-backend.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/isaacfernandez/webdev-class-node-backend/issues"
+  },
+  "homepage": "https://github.com/isaacfernandez/webdev-class-node-backend#readme",
+  "description": ""
+}
